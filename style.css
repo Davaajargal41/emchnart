@@ -18,6 +18,7 @@ section {
   color: #fff;
   perspective: 1000px;
 }
+
 section::before {
   content: "";
   position: absolute;
@@ -26,6 +27,13 @@ section::before {
   border-radius: 50%;
   transform: translate(-150px, -100px);
   background: linear-gradient(90deg, #127992, #f3f5f5);
+}
+@media only screen and (max-width: 500px) {
+  section::before {
+    width: 150px;
+    height: 150px;
+  }
+
 }
 section::after {
   content: "";
@@ -36,6 +44,13 @@ section::after {
   transform: translate(150px, 100px);
   background: linear-gradient(90deg, #1791a7, #f3f5f5);
 }
+@media only screen and (max-width: 500px) {
+  section::after {
+    width: 150px;
+    height: 150px;
+  }
+
+}
 .container {
   position: relative;
   height: 225px;
@@ -43,6 +58,12 @@ section::after {
   z-index: 100;
   transition: 0.6s;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 350px;
+    height: 200px;
+  }
 }
 .container:hover {
   transform: rotateY(180deg);
@@ -58,6 +79,13 @@ section::after {
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backface-visibility: hidden;
+}
+@media only screen and (max-width: 500px) {
+  .container .card {
+
+    width: 350px;
+    height: 200px;
+  }
 }
 .front-face header,
 .front-face .logo {
@@ -94,6 +122,11 @@ h7 {
 h5.number {
   font-size: 18px;
   letter-spacing: 1px;
+}
+@media only screen and (max-width: 500px) {
+  h5.number {
+    font-size: 15px;
+  }
 }
 h5.name {
   margin-top: 20px;
